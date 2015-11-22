@@ -13,4 +13,4 @@
 4. Теплякова Юлия
 
 
-Техническое задание:"ссылка"
+Техническое задание:"https://drive.google.com/file/d/0B0wq5zBdSPwlSTU4aWU3d0RjODQ/view?usp=sharing"
