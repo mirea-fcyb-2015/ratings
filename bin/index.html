@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>D3 Page</title>
+        <script type="text/javascript" src="D3%20Page_files/d3.js"></script>
+
+        <style type="text/css">
+                     .axis path,
+                     .axis line {
+                                  fill: none;
+                                  stroke: black;
+                                  shape-rendering: crispEdges;
+                                }
+        </style>
+    </head>
+
+    <body>
+    <div id="container"><svg height="300" width="500"><circle fill="teal" r="6.999999999999999" cy="82.17391304347825" cx="132.5"></circle><circle fill="teal" r="6.999999999999999" cy="82.17391304347825" cx="132.5"></circle><circle fill="teal" r="6.999999999999999" cy="82.17391304347825" cx="235"></circle><circle fill="teal" r="5.8" cy="50.86956521739132" cx="235"></circle><circle fill="teal" r="5" cy="30" cx="337.5"></circle><circle fill="teal" r="6.999999999999999" cy="82.17391304347825" cx="337.5"></circle><circle fill="teal" r="5" cy="30" cx="440"></circle><g transform="translate(0,270)" class="axis"><g transform="translate(30,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text x="0" y="9" style="text-anchor: middle;" dy=".71em">2011</text></g><g transform="translate(132.5,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text x="0" y="9" style="text-anchor: middle;" dy=".71em">2012</text></g><g transform="translate(235,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text x="0" y="9" style="text-anchor: middle;" dy=".71em">2013</text></g><g transform="translate(337.5,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text x="0" y="9" style="text-anchor: middle;" dy=".71em">2014</text></g><g transform="translate(440,0)" style="opacity: 1;" class="tick"><line x2="0" y2="6"></line><text x="0" y="9" style="text-anchor: middle;" dy=".71em">2015</text></g><path d="M30,6V0H440V6" class="domain"></path></g><g transform="translate(30,0)" class="axis"><g transform="translate(0,238.69565217391303)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text y="0" x="-9" style="text-anchor: end;" dy=".32em">5</text></g><g transform="translate(0,186.52173913043478)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text y="0" x="-9" style="text-anchor: end;" dy=".32em">10</text></g><g transform="translate(0,134.34782608695653)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text y="0" x="-9" style="text-anchor: end;" dy=".32em">15</text></g><g transform="translate(0,82.17391304347825)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text y="0" x="-9" style="text-anchor: end;" dy=".32em">20</text></g><g transform="translate(0,30)" style="opacity: 1;" class="tick"><line y2="0" x2="-6"></line><text y="0" x="-9" style="text-anchor: end;" dy=".32em">25</text></g><path d="M-6,30H0V270H-6" class="domain"></path></g></svg></div>
+<script type="text/javascript">
+
+var w = 500;
+var h = 300;
+var padding = 30;
+
+
+var svg = d3.select("#container")
+             .append("svg")
+               .attr("width", w)
+               .attr("height", h);
+
+var dataset = [
+            [2012, 20], [2012, 20], [2013, 20], [2013, 23], [2014, 25],
+            [2014, 20], [2015, 25]
+              ];
+
+
+var xScale = d3.scale.linear()
+               .domain([2011, d3.max(dataset, function(d) { return d[0]; })])
+               .range([padding, w-padding*2]);
+
+var yScale = d3.scale.linear()
+                .domain([2, d3.max(dataset, function(d) { return d[1]; })])
+                 .range([h - padding, padding]);
+
+var rScale = d3.scale.linear()
+               .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+               .range([15, 5]);
+
+
+var xAxis = d3.svg.axis()
+               .scale(xScale)
+               .orient("bottom")
+               .ticks(5);
+
+var yAxis = d3.svg.axis()
+              .scale(yScale)
+              .orient("left")
+              .ticks(5);
+
+
+svg.selectAll("circle")
+   .data(dataset)
+   .enter()
+   .append("circle")
+   .attr("cx", function(d) {return xScale(d[0]);})
+   .attr("cy", function(d) {return yScale(d[1]);})
+   .attr("r", function(d) { return rScale(d[1]);})
+   .attr("fill",function(d){if (d[0]>100) {return "teal"} else {return "orange"}});
+
+        
+svg.append("g")
+   .attr("class", "axis")
+   .attr("transform", "translate(0," + (h - padding) + ")")
+   .call(xAxis);
+
+svg.append("g")
+   .attr("class", "axis")
+   .attr("transform", "translate(" + padding + ",0)")
+   .call(yAxis);
+
+</script>
+
+
+
+</body></html>
