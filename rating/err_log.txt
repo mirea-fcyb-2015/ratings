@@ -1,0 +1,24 @@
+04.05.2016-18:01:00 journal, printEditElement, page : Don't have a news block id
+04.05.2016-18:10:52 journal, printEditElement, page : Don't have a news block id
+04.05.2016-18:33:23 journal, printEditElement, page : Don't have a news block id
+05.05.2016-17:55:07 journal, printElement, page : Don't have a news block id
+05.05.2016-17:55:16 journal, printElement, page : Don't have a news block id
+05.05.2016-17:55:20 journal, printElement, page : Don't have a news block id
+05.05.2016-18:27:03 journal, printElement, page : Don't have a news block id
+06.05.2016-12:56:38 journal, printElement, page : Don't have a news block id
+06.05.2016-12:56:46 journal, printElement, page : Don't have a news block id
+06.05.2016-12:57:22 journal, printElement, page : Don't have a news block id
+06.05.2016-12:57:51 journal, printElement, page : Don't have a news block id
+06.05.2016-12:57:58 journal, printElement, page : Don't have a news block id
+06.05.2016-13:08:30 journal, printElement, page : Don't have a news block id
+06.05.2016-13:11:07 journal, printElement, page : Don't have a news block id
+06.05.2016-13:25:31 journal, printElement, page : Don't have a news block id
+06.05.2016-13:25:34 journal, printElement, page : Don't have a news block id
+06.05.2016-13:27:46 journal, printElement, page : Don't have a news block id
+06.05.2016-13:54:01 journal, printEditElement, page : Don't have a news block id
+06.05.2016-13:54:22 journal, printEditElement, page : Don't have a news block id
+06.05.2016-13:55:13 journal, printEditElement, page : Don't have a news block id
+06.05.2016-15:13:21 journal, printEditElement, page : Don't have a news block id
+06.05.2016-15:14:59 journal, printEditElement, page : Don't have a news block id
+06.05.2016-16:59:28 journal, printEditElement, page : Don't have a news block id
+
